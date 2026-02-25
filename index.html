@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesley O. Choka - MEL Specialist | Data Scientist | AI Enthusiast</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS (overrides Tailwind with our colors) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-neutral-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white-nav shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-primary hover:text-secondary transition">
+                        Wesley O. Choka
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-6">
+                        <a href="#home" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#expertise" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">Expertise</a>
+                        <a href="#projects" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#approach" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">Approach</a>
+                        <a href="#experience" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#contact" class="nav-link text-dark hover:text-primary transition px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">About</a>
+                <a href="#expertise" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Expertise</a>
+                <a href="#projects" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Projects</a>
+                <a href="#approach" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Approach</a>
+                <a href="#reports" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Reports</a>
+                <a href="#experience" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Experience</a>
+                <a href="#contact" class="block px-3 py-2 text-dark hover:bg-softBlue rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Modern Layout with Image Left -->
+    <section id="home" class="gradient-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16" data-aos="fade-up">
+                
+                <!-- Left Column - Image -->
+                <div class="lg:w-1/3 flex justify-center" data-aos="fade-right" data-aos-delay="200">
+                    <div class="relative">
+                        <!-- Image with soft rounded borders -->
+                        <div class="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500">
+                            <img src="images/wesley.png" 
+                                alt="Wesley O. Choka - MEL Specialist" 
+                                class="w-full h-full object-cover object-top"  <!-- Shows top of image (your head) -->
+                                loading="lazy">
+                        </div>
+                        
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hidden lg:block"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/20 rounded-3xl backdrop-blur-sm border border-white/20 hidden lg:block"></div>
+                        
+                        <!-- Status badge -->
+                        <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                            <a href="#contact" 
+                            class="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm border border-white/30 shadow-lg hover:bg-white/40 transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-envelope text-green-300 mr-2"></i> Available for consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Content -->
+                <div class="lg:w-2/3 text-center lg:text-left" data-aos="fade-left" data-aos-delay="300">
+                    <!-- Name -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        Wesley O. Choka
+                    </h1>
+                    
+                    <!-- Title with animated underline -->
+                    <div class="relative inline-block mb-6">
+                        <p class="text-xl md:text-2xl text-softBlue font-light leading-relaxed">
+                            Monitoring, Evaluation &amp; Learning Specialist
+                        </p>
+                        <div class="absolute -bottom-2 left-0 w-24 h-1 bg-white/30 rounded-full hidden lg:block"></div>
+                    </div>
+                    
+                    <!-- Expertise tags -->
+                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
+                        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm border border-white/20">
+                            <i class="fas fa-chart-line mr-2"></i>Data Storyteller
+                        </span>
+                        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm border border-white/20">
+                            <i class="fas fa-robot mr-2"></i>AI Enthusiast
+                        </span>
+                        <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm border border-white/20">
+                            <i class="fas fa-calculator mr-2"></i>Statistics
+                        </span>
+                    </div>
+                    
+                    <!-- Quick Stats in horizontal row -->
+                    <div class="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto lg:mx-0 mb-10">
+                        <div class="text-center lg:text-left bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all hover:scale-105">
+                            <div class="text-2xl md:text-3xl font-bold text-white stat-counter" data-target="10">10+</div>
+                            <div class="text-softBlue text-xs md:text-sm mt-1">Years Experience</div>
+                        </div>
+                        <div class="text-center lg:text-left bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all hover:scale-105">
+                            <div class="text-2xl md:text-3xl font-bold text-white stat-counter" data-target="100">100+</div>
+                            <div class="text-softBlue text-xs md:text-sm mt-1">Projects Completed</div>
+                        </div>
+                        <div class="text-center lg:text-left bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all hover:scale-105">
+                            <div class="text-2xl md:text-3xl font-bold text-white stat-counter" data-target="3">3</div>
+                            <div class="text-softBlue text-xs md:text-sm mt-1">Advanced Degrees</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" 
+                        class="group bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-softBlue transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-paper-plane mr-2 group-hover:translate-x-1 transition-transform"></i>
+                            Contact Me
+                        </a>
+                        <a href="#projects" 
+                        class="group border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-download mr-2 group-hover:translate-y-1 transition-transform"></i>
+                            View Resources
+                        </a>
+                    </div>
+                    
+                    <!-- Social proof or availability note for mobile -->
+                    <p class="text-sm text-softBlue/80 mt-6 lg:hidden">
+                        <i class="fas fa-clock mr-2"></i>Available for new projects and collaborations
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Profile -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">Professional Profile</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white-nav p-8 rounded-2xl shadow-lg" data-aos="fade-up">
+                    <p class="text-xl text-dark leading-relaxed">
+                        I am a dedicated Monitoring, Evaluation, and Learning (MEL) Specialist with over three years of experience in international development and policy research. My work focuses on turning raw data into clear, actionable insights—designing MEL frameworks, building interactive dashboards, and supporting evidence-based decision-making in multicultural and resource-conscious environments.
+                    </p>
+                    <p class="text-xl text-dark leading-relaxed mt-6">
+                        I hold an <span class="font-semibold text-primary">MBA in Artificial Intelligence</span> and am completing an <span class="font-semibold text-primary">MSc in Statistics</span>, blending modern analytical techniques with rigorous statistical foundations to address complex development challenges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Expertise -->
+    <section id="expertise" class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">Core Expertise</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Expertise Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-right">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Monitoring &amp; Evaluation</h3>
+                            <p class="text-gray-600">MEL framework design, indicator tracking, results-based management, qualitative &amp; quantitative methods.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expertise Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-left">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-chart-pie text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Data Analysis &amp; Visualization</h3>
+                            <p class="text-gray-600">Advanced analytics in R, Python, Stata, SPSS; interactive dashboards with Tableau &amp; Power BI.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expertise Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-right">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-database text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Data Systems</h3>
+                            <p class="text-gray-600">Analytics, mobile data collection (KoBoToolbox, SurveyCTO), data quality assurance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expertise Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-left">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Reporting &amp; Communication</h3>
+                            <p class="text-gray-600">Technical reporting, stakeholder presentations, data storytelling for diverse audiences.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expertise Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover md:col-span-2" data-aos="fade-up">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Project Collaboration</h3>
+                            <p class="text-gray-600">Cross-functional teamwork, adaptive management, gender-responsive MEL integration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Journey & Timeline -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">Professional Journey</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+                <p class="text-xl text-gray-600 mt-6">Building Expertise Across Monitoring &amp; Evaluation, Data Science, and Applied AI</p>
+            </div>
+            
+            <!-- Career Timeline -->
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Timeline Line with Arrows -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full">
+                    <!-- Main timeline line -->
+                    <div class="absolute top-0 left-0 w-full h-full bg-primary-light"></div>
+                    
+                    <!-- Arrow connectors - one between each timeline item -->
+                    <div class="absolute top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary">
+                        <i class="fas fa-arrow-down text-2xl"></i>
+                    </div>
+                    <div class="absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary">
+                        <i class="fas fa-arrow-down text-2xl"></i>
+                    </div>
+                    <div class="absolute top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary">
+                        <i class="fas fa-arrow-down text-2xl"></i>
+                    </div>
+                    <div class="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary">
+                        <i class="fas fa-arrow-down text-2xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Timeline Items (your existing code) -->
+                <!-- Timeline Item 1 -->
+                <div class="relative mb-12" data-aos="fade-right">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-8 text-right">
+                            <div class="bg-primary text-white px-4 py-2 rounded-lg inline-block mb-2">2015</div>
+                            <h3 class="text-2xl font-bold text-dark">BSc Economics &amp; Statistics</h3>
+                            <p class="text-gray-600">Egerton University</p>
+                            <p class="text-gray-500 mt-2">Graduated with foundation in quantitative analysis</p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="relative mb-12" data-aos="fade-left">
+                    <div class="md:flex items-center">
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-primary text-white px-4 py-2 rounded-lg inline-block mb-2">2018</div>
+                            <h3 class="text-2xl font-bold text-dark">MSc Statistics Begins</h3>
+                            <p class="text-gray-600">Egerton University</p>
+                            <p class="text-gray-500 mt-2">Advanced statistical training alongside professional work</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="relative mb-12" data-aos="fade-right">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-8 text-right">
+                            <div class="bg-primary text-white px-4 py-2 rounded-lg inline-block mb-2">2022</div>
+                            <h3 class="text-2xl font-bold text-dark">Research Roles</h3>
+                            <p class="text-gray-600">KRA &amp; KIPPRA</p>
+                            <p class="text-gray-500 mt-2">Research positions developing policy analysis skills</p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="relative mb-12" data-aos="fade-left">
+                    <div class="md:flex items-center">
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-primary text-white px-4 py-2 rounded-lg inline-block mb-2">2023</div>
+                            <h3 class="text-2xl font-bold text-dark">MBA in AI + M&amp;E Specialist Role</h3>
+                            <p class="text-gray-600">Nexford University &amp; Altai Consulting</p>
+                            <p class="text-gray-500 mt-2">Began MBA while taking on M&amp;E leadership</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 5 -->
+                <div class="relative" data-aos="fade-up">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/2 md:pr-8 text-right">
+                            <div class="bg-accent text-white px-4 py-2 rounded-lg inline-block mb-2">Present</div>
+                            <h3 class="text-2xl font-bold text-dark">Integrated Expertise</h3>
+                            <p class="text-gray-600">Blending M&amp;E, data science, and AI</p>
+                            <p class="text-gray-500 mt-2">for innovative development solutions</p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Current Role Details -->
+            <div class="mt-20 bg-white-nav p-10 rounded-2xl shadow-lg" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-dark mb-6">Monitoring, Evaluation &amp; Learning Officer</h3>
+                <p class="text-gray-600 mb-4">Altai Consulting · May 2023 – Present</p>
+                
+                <h4 class="font-semibold text-dark mb-3">The Challenge</h4>
+                <p class="text-gray-600 mb-6">Transforming traditional M&amp;E systems into data-driven decision platforms that provide real-time insights for development programs across multiple sectors.</p>
+                
+                <h4 class="font-semibold text-dark mb-3">My Integrated Approach</h4>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>Designed automated data pipelines from and KoBoToolbox</li>
+                    <li>Developed interactive Tableau dashboards for stakeholder reporting</li>
+                    <li>Applied statistical analysis using Stata and Python for evidence generation</li>
+                    <li>Integrated gender-responsive frameworks into all M&amp;E activities</li>
+                    <li>Built capacity of program teams in data utilization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Services Section (for Gumroad) -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">Professional Resources &amp; Tools</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+                <p class="text-xl text-gray-600 mt-6">Download ready-to-use templates, dashboards, and guides</p>
+            </div>
+            
+            <!-- Products Grid - First 6 Products -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+                <!-- Product 1: M&E Dashboard -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100" data-aos="fade-up">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/mne.png" alt="M&amp;E Dashboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Excel</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Template</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Complete M&amp;E Dashboard Excel Template</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive monitoring dashboard with automated KPIs, indicator tracking, and visualization.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$2.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2: Statistical Analysis Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/sasc.png" alt="SPSS Package" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">SPSS</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Scripts</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Statistical Analysis Scripts Collection</h3>
+                        <p class="text-gray-600 mb-4">Ready-to-use SPSS, STATA, and R scripts for common M&amp;E statistical analyses.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$3.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3: SurveyCTO Templates -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/mdct.png" alt="SurveyCTO" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">SurveyCTO</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">KoboCollect</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Mobile Data Collection Templates</h3>
+                        <p class="text-gray-600 mb-4">Pre-designed SurveyCTO and KoboCollect forms for M&amp;E data collection.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$1.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4: Power BI Dashboard -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100" data-aos="fade-up">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/emedpbi.png" alt="Power BI" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Power BI</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Dashboard</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Executive M&amp;E Dashboard (Power BI)</h3>
+                        <p class="text-gray-600 mb-4">Interactive Power BI dashboard with drill-down capabilities and real-time updates.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$4.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5: Report Templates -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/merpt.png" alt="Report Templates" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Word</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">PowerPoint</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">M&amp;E Report &amp; Presentation Templates</h3>
+                        <p class="text-gray-600 mb-4">Professional Word and PowerPoint templates for M&amp;E reporting.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$1.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6: Video Tutorials -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/mefvc.png" alt="Video Tutorials" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Video</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Course</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">M&amp;E Fundamentals Video Course</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive video tutorials on M&amp;E frameworks, data collection, and analysis.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$4.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Products (Next 4-6 Products) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 hidden" id="more-products">
+                <!-- Product 7: Python Scripts -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/coming-soon.png" alt="Python Scripts" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Scripts</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Data Analysis Python Scripts</h3>
+                        <p class="text-gray-600 mb-4">Python scripts for data cleaning, analysis, and visualization for M&amp;E professionals.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$5.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8: R Statistical Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/coming-soon.png" alt="R Scripts" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">R</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Statistics</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Statistical Analysis with R</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive R scripts for regression, hypothesis testing, and data visualization.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$4.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 9: STATA Do-files -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/coming-soon.png" alt="STATA Do-files" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">STATA</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Do-files</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">STATA Do-files for Impact Evaluation</h3>
+                        <p class="text-gray-600 mb-4">Ready-to-use STATA do-files for difference-in-differences, RCTs, and propensity score matching.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$3.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 10: Tableau Dashboards -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/coming-soon.png" alt="Tableau Dashboards" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Tableau</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Dashboard</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Tableau Public Dashboards</h3>
+                        <p class="text-gray-600 mb-4">Interactive Tableau dashboards for M&amp;E indicators and donor reporting.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$5.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 11: Logical Framework Templates -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/coming-soon.png" alt="Logical Framework" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">LogFrame</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Template</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Logical Framework Templates</h3>
+                        <p class="text-gray-600 mb-4">Professional logframe templates with indicators, means of verification, and assumptions.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$2.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 12: M&E Plan Template -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100">
+                    <div class="bg-primary h-2"></div>
+                    <img src="images/thumnail/coming-soon.png" alt="M&amp;E Plan" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-softBlue text-primary text-xs font-semibold px-3 py-1 rounded-full">Word</span>
+                            <span class="ml-2 bg-accent-light text-dark text-xs font-semibold px-3 py-1 rounded-full">Plan</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-2">Comprehensive M&amp;E Plan Template</h3>
+                        <p class="text-gray-600 mb-4">30-page M&amp;E plan template with all sections, indicators, and reporting formats.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">$6.99</span>
+                            <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-deep transition">
+                                Preview <i class="fas fa-eye ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- See More Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button id="seeMoreBtn" 
+                        class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-deep transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <span>See More Resources</span>
+                    <i class="fas fa-arrow-down ml-2" id="seeMoreIcon"></i>
+                </button>
+                <p class="text-sm text-gray-500 mt-4">12+ professional resources for M&amp;E specialists</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">My Approach</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Understand</h3>
+                    <p class="text-gray-600">Deep dive into context, needs, and existing systems to identify gaps and opportunities.</p>
+                </div>
+                
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-bar text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Analyze</h3>
+                    <p class="text-gray-600">Apply rigorous statistical methods and AI tools to generate actionable insights.</p>
+                </div>
+                
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bullhorn text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Communicate</h3>
+                    <p class="text-gray-600">Transform complex findings into clear, compelling stories for diverse audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">Education</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover border-t-4 border-primary" data-aos="fade-up">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">MSc in Statistics</h3>
+                    <p class="text-primary font-semibold">Egerton University</p>
+                    <p class="text-gray-500">2026</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover border-t-4 border-primary" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">MBA in Artificial Intelligence</h3>
+                    <p class="text-primary font-semibold">Nexford University</p>
+                    <p class="text-gray-500">2023 – 2024</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover border-t-4 border-primary" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">BSc Economics &amp; Statistics</h3>
+                    <p class="text-primary font-semibold">Egerton University</p>
+                    <p class="text-gray-500">2011 – 2015</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer & Mentorship -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gradient-bg rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-up">
+                <div class="p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-6">Volunteer &amp; Mentorship</h2>
+                    <p class="text-xl text-softBlue leading-relaxed">
+                        I believe in giving back and grounding my work in community needs. My experience as a Volunteer Mentor with Balloon Kenya (ICS) involved mentoring young entrepreneurs in marginalized communities, facilitating workshops on business development, and helping to build sustainable community projects. This hands-on experience reinforces my commitment to grassroots impact and inclusive, practical development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Commitment -->
+    <section class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-dark mb-6">Personal Commitment</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    I believe in data that serves people. Whether in the field or behind a dashboard, I strive to ensure insights are accessible, actionable, and aligned with equity and inclusion. Fluent in English and Swahili, I am prepared to travel extensively and collaborate across cultures to deliver meaningful results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Further -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Explore Further</h2>
+            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="100">
+                <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-softBlue transition">
+                    View my projects &amp; dashboards
+                </a>
+                <a href="#experience" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition">
+                    Detailed work history
+                </a>
+                <a href="#approach" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition">
+                    My MEL philosophy
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition">
+                    Get in touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Email -->
+                    <div class="text-center p-6 border border-softBlue rounded-lg hover:shadow-lg transition" data-aos="fade-up">
+                        <i class="fas fa-envelope text-4xl text-primary mb-4"></i>
+                        <a href="mailto:chokaawes@gmail.com" class="text-dark hover:text-primary transition block">
+                            chokaawes@gmail.com
+                        </a>
+                    </div>
+                    
+                    <!-- Phone - Dialup Link (Number Hidden) -->
+                    <div class="text-center p-6 border border-softBlue rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-phone text-4xl text-primary mb-4"></i>
+                        <a href="tel:+254700000000" class="text-dark hover:text-primary transition block font-medium">
+                            Click to Call
+                        </a>
+                        <p class="text-xs text-gray-500 mt-1">(Number hidden for privacy)</p>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 text-3xl" data-aos="fade-up">
+                    <a href="https://www.linkedin.com/in/wesley-ochoka/"
+                    target="_blank"
+                    rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Ochoka"
+                    target="_blank"
+                    rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/WOchoka"
+                    target="_blank"
+                    rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+                    <a href="https://web.facebook.com/wesley.ochoka/"
+                    target="_blank"
+                    rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-softBlue">&copy; 2026 Wesley O. Choka • Evidence-driven analytics evaluation</p>
+            <div class="flex justify-center space-x-4 mt-4 text-sm text-softBlue">
+                <a href="#home" class="hover:text-white transition">Back to Top</a>
+                <span>•</span>
+                <a href="https://www.freeprivacypolicy.com/live/373da4c7-b806-4f72-ba6a-8e81ecd02096" target="_blank"
+                    rel="noopener noreferrer" class="hover:text-white transition">Privacy</a>
+                <span>•</span>
+                <a href="https://www.freeprivacypolicy.com/live/7663199e-c3af-405f-925a-4e7afe5d6620" target="_blank"
+                    rel="noopener noreferrer" class="hover:text-white transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

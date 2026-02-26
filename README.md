@@ -17,6 +17,6 @@ This is my professional portfolio showcasing my experience in M&E, Data Science,
 - LinkedIn: [Wesley O. Choka](https://www.linkedin.com/in/wesley-ochoka/)
 
 ## Live Site
-[https://ochoka.github.io/wesley-choka/](https://ochoka.github.io)
+[Wesley Choka](https://ochoka.github.io/wesley-choka/)
 
 © 2026 Wesley O. Choka
